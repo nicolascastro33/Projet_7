@@ -1,6 +1,12 @@
+import { FooterWrapper, FooterImg, FooterText } from "./style"
+import logoFooter from '../../assets/logoFooter.png'
+
 function Footer(){
     return(
-        <h1>Footer</h1>
+        <FooterWrapper>
+            <FooterImg src={logoFooter} alt='logo site' />
+            <FooterText>© 2020 Kasa. All rights reserved</FooterText>
+        </FooterWrapper>
     )
 }
 
