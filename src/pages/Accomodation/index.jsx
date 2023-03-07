@@ -1,17 +1,16 @@
 import { useParams } from "react-router-dom"
 import { Logement } from "../../logement"
+import { useEffect } from "react"
 
 function Accomodation(){
     const {id} = useParams()
-    function FoundElements({logement, id}){
-        return Logement.find((element) =>{
-            return element.id === id 
-        })
-    }
-    const elements = FoundElements({Logement, id})
-    console.log({elements})
+    const element = Logement.find(element => element.id === id)
+    
+    useEffect(() =>{
+        document.title = (`Kasa - Logement de ${element.host.name}`)
+    })
     return(
-        <h1>{id}</h1>
+        <h1>{element.id}</h1>
     )
 }
 

@@ -3,12 +3,12 @@ import styled from "styled-components";
 
 
 export const CardWrapper = styled.div`
-    background: ${colors.primary};'
-    width: 335px;
+    background: ${colors.primary};
+    width: 280px;
     height: 240px;    
     max-height: 340px;
     max-width: 340px;
-    margin: 21px;    
+    margin: 15px;    
     border-radius: 10px;
     text-align: center;
     position: relative;

@@ -35,11 +35,14 @@ export const ImageWrapper = styled.img`
 `
 
 export const AllCardsWrapper = styled.div`
+    margin-top: 30px;
     background: ${colors.backgroundLightGrey}; 
-    padding: 3% 2% 3% 2%;
+    padding: 2%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
+    border-radius: 20px;
+
+
 
 `

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import colors from "../../utils/style/colors";
 
 export const AboutWrapper = styled.div`
     padding: 0 4% 0 4%;
@@ -24,4 +25,29 @@ export const ImageWrapper = styled.img`
     height: 200%;
     position: relative;
     bottom: 100px;
+`
+
+export const AllDropDown = styled.div`
+    color: ${colors.secondary};
+    display: flex;
+    align-item: center; 
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 30px ;
+`
+
+export const DropDrown = styled.div`
+    width: 70%;
+    background: ${colors.primary};
+    height: 47px;
+    color: ${colors.secondary};
+    border-radius: 10px;
+    display: flex; 
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+`
+export const ArrowDropDown = styled.img`
 `
