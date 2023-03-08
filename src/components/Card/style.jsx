@@ -24,7 +24,6 @@ export const CardWrapper = styled.div`
 export const TextCardWrapper = styled.h2`
     color: ${colors.secondary};
     font-size: 16px;
-    text-decoration: none;
 `
 
 export const ImageWrapper = styled.img`

@@ -1,9 +1,11 @@
-import { ImageDivWrapper, ImageWrapper, AboutWrapper, AllDropDown, DropDrown, ArrowDropDown } from './style'
+import { ImageDivWrapper, ImageWrapper, AboutWrapper, AllDropDown } from './style'
 import FirstImage from '../../assets/about-picture.jpg'
 import { useEffect } from 'react'
-import Arrow from '../../assets/arrow.png'
+import DropDrown from '../../components/Dropdown'
+import { InfoAbout } from '../../InfoAbout'
 
 function About(){
+
     useEffect(() =>{
         document.title = 'Kasa - À Propos'
     })
@@ -16,22 +18,13 @@ function About(){
             />
           </ImageDivWrapper>
           <AllDropDown>
-            <DropDrown>
-              <h2>Fiabilité</h2>
-              <ArrowDropDown src={Arrow} alt='flèche'/>
-            </DropDrown>
-            <DropDrown>
-              <h2>Respect</h2>
-              <ArrowDropDown src={Arrow} alt='flèche'/>
-            </DropDrown>
-            <DropDrown>
-              <h2>Responsabilité</h2>
-              <ArrowDropDown src={Arrow} alt='flèche'/>
-            </DropDrown>
-            <DropDrown>
-              <h2>Responsabilité</h2>
-              <ArrowDropDown src={Arrow} alt='flèche'/>
-            </DropDrown>
+            {InfoAbout?.map((element, index) => (
+              <DropDrown 
+                key={`${element.name}-${index}`}
+                name={element.name}
+                description={element.description}
+              />
+            ))}          
           </AllDropDown>
         </AboutWrapper>
       )

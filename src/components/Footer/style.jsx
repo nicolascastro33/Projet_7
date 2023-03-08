@@ -19,5 +19,5 @@ export const FooterImg = styled.img`
 `
 
 export const FooterText = styled.h2`
-
+    margin-bottom: 0;
 `

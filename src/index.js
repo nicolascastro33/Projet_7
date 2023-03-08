@@ -8,23 +8,23 @@ import Accomodation from './pages/Accomodation'
 import About from './pages/About'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import GlobalStyle from './utils/style/GlobalStyle'
+import { ThemeProvider } from './utils/context'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
     <GlobalStyle />
     <Router>
-      <Header />
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route
-          path="/logements/:id"
-          element={<Accomodation />}
-        />
-        <Route path="/about" element={<About />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
-      <Footer />
+      <ThemeProvider>
+        <Header />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/logements/:id" element={<Accomodation />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+        <Footer />
+      </ThemeProvider>
     </Router>
   </React.StrictMode>
 )

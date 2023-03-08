@@ -35,19 +35,3 @@ export const AllDropDown = styled.div`
     justify-content: space-between;
     margin-top: 30px ;
 `
-
-export const DropDrown = styled.div`
-    width: 70%;
-    background: ${colors.primary};
-    height: 47px;
-    color: ${colors.secondary};
-    border-radius: 10px;
-    display: flex; 
-    justify-content: space-between;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
-
-`
-export const ArrowDropDown = styled.img`
-`

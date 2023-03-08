@@ -66,11 +66,11 @@ function Accomodation() {
         </InformationLogementWrapper>
         <AllDropDown>
             <DropDrown
-                element={element.description}
+                description={element.description}
                 name='Description'
             />  
             <DropDrown
-                element={element.equipments}
+                description={element.equipments}
                 name='Équipements'
             /> 
         </AllDropDown> 
