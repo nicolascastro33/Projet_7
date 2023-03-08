@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { HeaderWrapper, LogoWrapper, NavWrapper, StyleLink } from './style'
-import Logo from '../../assets/logo.png'
+import Logo from '../../assets/logo.svg'
 
 function Header() {
   return (

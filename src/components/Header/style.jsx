@@ -22,4 +22,7 @@ export const StyleLink = styled(Link)`
     text-decoration: none;
     margin: auto;
     color: ${colors.primary};
+    &:hover {
+        text-decoration: underline ${colors.primary}
+    }
 `

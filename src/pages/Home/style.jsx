@@ -42,7 +42,5 @@ export const AllCardsWrapper = styled.div`
     flex-wrap: wrap;
     justify-content: space-between;
     border-radius: 20px;
-
-
-
 `
+
