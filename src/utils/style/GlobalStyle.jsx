@@ -20,7 +20,7 @@ body {
 `
 
 function GlobalStyle() {
-    const  theme  = useContext(ThemeContext)
+    const  {theme}  = useContext(ThemeContext)
     return <StyledGlobalStyle isDarkMode={theme === 'dark'} />
   }
   

@@ -36,7 +36,7 @@ export const AllTagsWrapper = styled.div`
 `
 export const TagsWrapper = styled.h3`
     font-size: 14px;
-    color: ${colors.secondary};
+    color: ${({theme}) => (theme === 'dark' ? colors.darkMode : colors.secondary)};
     background: ${colors.primary}; 
     border-radius: 50px;
     text-align: center;
@@ -69,8 +69,6 @@ export const OwnerPicture = styled.img`
     margin: auto;
     margin-left: 0;
 `
-
-
 
 export const StarsWrapper = styled.div`
     display: flex;

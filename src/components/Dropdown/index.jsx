@@ -6,16 +6,23 @@ import {
 } from './style'
 import Arrow from '../../assets/arrow.png'
 import { useState } from 'react'
+import { useTheme } from '../../utils/hooks'
 
 function DropDrown({ description, name }) {
+  const { theme } = useTheme()
   const [dropDown, setDropDown] = useState(false)
   const isArray = Array.isArray(description)
 
   return (
     <OneDropDrown>
-      <HeaderDropDown onClick={() => setDropDown(!dropDown)}>
-        <h2>{name}</h2>
-        <ArrowDropDown src={Arrow} alt="arrow" />
+      <HeaderDropDown theme={theme} onClick={() => setDropDown(!dropDown)}>
+        <h2 >{name}</h2>
+        {!dropDown ?( 
+          <ArrowDropDown theme={theme} src={Arrow} alt="arrow" />
+        ) : (
+          <ArrowDropDown theme={theme} $isOpen src={Arrow} alt="arrow" />
+        )}
+        
       </HeaderDropDown>
       {!dropDown ? (
         <TextDropDown>

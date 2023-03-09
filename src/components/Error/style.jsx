@@ -26,6 +26,11 @@ export const ErrorMessageWrapper = styled.h2`
 export const LinkErrorWrapper = styled(Link)`
     color: ${colors.primary};
     font-size: 18px;
+    font-weight: normal;
     margin-bottom: 50px;
+    text-decoration: underline ${colors.primary};
+    &:hover{
+        font-weight: bold;
+    }
 
 `

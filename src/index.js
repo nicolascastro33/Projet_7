@@ -6,6 +6,7 @@ import Error from './components/Error'
 import Footer from './components/Footer'
 import Accomodation from './pages/Accomodation'
 import About from './pages/About'
+import DarkMode from './components/DarkMode'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import GlobalStyle from './utils/style/GlobalStyle'
 import { ThemeProvider } from './utils/context'
@@ -13,10 +14,11 @@ import { ThemeProvider } from './utils/context'
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
-    <GlobalStyle />
     <Router>
-      <ThemeProvider>
+      <ThemeProvider>    
+        <GlobalStyle />
         <Header />
+        <DarkMode />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/logements/:id" element={<Accomodation />} />
