@@ -9,19 +9,21 @@ import { Logement } from '../../logement'
 import FirstImage from '../../assets/accueil-picture.jpg'
 import { useEffect } from 'react'
 import Card from '../../components/Card'
+import { useTheme } from '../../utils/hooks'
 
 function Home() {
+  const {theme} = useTheme()
   useEffect(() => {
     document.title = 'Kasa - Bienvenue'
   })
 
   return (
     <AccueilWrapper>
-      <ImageDivWrapper>
+      <ImageDivWrapper theme={theme}>
         <ImageWrapper src={FirstImage} alt="photo d'une colline" />
-        <TextInImageWrapper>Chez vous, partout et ailleurs</TextInImageWrapper>
+        <TextInImageWrapper >Chez vous, partout et ailleurs</TextInImageWrapper>
       </ImageDivWrapper>
-      <AllCardsWrapper>
+      <AllCardsWrapper theme={theme}>
         {Logement?.map((logement, index) =>(
                   <Card 
                       key={`${logement.title}-${index}`}

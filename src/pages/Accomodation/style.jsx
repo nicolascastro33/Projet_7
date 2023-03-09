@@ -10,6 +10,9 @@ export const AccomodationWrapper = styled.div`
 export const InformationLogementWrapper = styled.div`
     display: flex;
     justify-content: space-between;
+    @media(max-width: 1000px){
+        flex-direction: column;
+    }
 `
 
 export const ImageDebutWrapper = styled.img`
@@ -32,8 +35,8 @@ export const MapsLogement = styled.h2`
 
 export const AllTagsWrapper = styled.div`
     display: flex;
-    // border: 1px solid black;
 `
+
 export const TagsWrapper = styled.h3`
     font-size: 14px;
     color: ${({theme}) => (theme === 'dark' ? colors.darkMode : colors.secondary)};
@@ -49,6 +52,16 @@ export const RatingWrapper = styled.div`
     display: flex; 
     flex-direction: column; 
     width: 25%;
+    @media(max-width: 1000px){
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+    }
+    @media(max-width: 500px){
+        flex-direction: column-reverse;
+        justify-content: start;
+    }
+
 
 `
 export const NameOwnerWrapper = styled.div`
@@ -59,7 +72,15 @@ export const NameOwnerWrapper = styled.div`
         font-weight: normal;
         margin: auto;
         margin-right: 10px;
+        @media(max-width: 500px){
+            margin-left: unset;
+        }
     }
+    @media(max-width: 500px){
+        display: flex;
+        margin-top: 10px;
+    }
+
 `
 
 export const OwnerPicture = styled.img`
@@ -68,11 +89,18 @@ export const OwnerPicture = styled.img`
     height: 60px;
     margin: auto;
     margin-left: 0;
+    @media(max-width: 500px){
+        margin: ;
+    }
 `
 
 export const StarsWrapper = styled.div`
     display: flex;
-    justify-content: center;    
+    justify-content: center;  
+    @media(max-width: 500px){
+        justify-content: unset;
+    }
+
 `
 
 export const AllDropDown = styled.div`
@@ -81,5 +109,9 @@ export const AllDropDown = styled.div`
     grid-template-columns: 45% 45%;
     align-item: center; 
     justify-content: space-between;
-    margin-top: 30px ;
+    margin-top: 30px;
+    @media(max-width: 1000px){
+        display: flex;
+        flex-direction: column;
+    }
 `

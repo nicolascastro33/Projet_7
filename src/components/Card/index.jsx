@@ -1,17 +1,16 @@
-import { CardWrapper, TextCardWrapper, ImageWrapper } from './style'
+import { CardWrapperLink, TextCardWrapper, ImageWrapper } from './style'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
 import DefaultPicture from '../../assets/accueil-picture.jpg'
+import { useTheme } from '../../utils/hooks'
 
 function Card({ title, id, cover }) {
+  const {theme} = useTheme()
   const linkId = `/logements/${id}`
   return (
-    <Link to={linkId}>
-      <CardWrapper>
+      <CardWrapperLink to={linkId}>
         <ImageWrapper src={cover} alt={title}/>
-        <TextCardWrapper>{title}</TextCardWrapper>
-      </CardWrapper>
-    </Link>
+        <TextCardWrapper theme={theme}>{title}</TextCardWrapper>
+      </CardWrapperLink>
   )
 }
 
@@ -21,7 +20,7 @@ Card.protoType = {
   id: PropTypes.string.isRequired,
 }
 Card.defaultProps = {
-  name: 'hello',
+  name: '',
   picture: DefaultPicture,
 }
 

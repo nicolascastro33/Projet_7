@@ -37,10 +37,17 @@ export const ImageWrapper = styled.img`
 export const AllCardsWrapper = styled.div`
     margin-top: 30px;
     background: ${colors.backgroundLightGrey}; 
-    padding: 2%;
+    // padding: 2%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     border-radius: 20px;
+    @media(max-width: 750px){
+       
+    }
+    ${({theme}) => (theme === 'dark' &&`
+      background: ${colors.darkMode};
+    `)}
+
 `
 

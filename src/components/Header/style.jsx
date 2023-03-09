@@ -11,7 +11,7 @@ export const HeaderWrapper = styled.header`
 export const LogoWrapper = styled.img`
     width: 210px;
     height: 68px;
-    @media (max-width: 800px) {
+    @media (max-width: 600px) {
         width: 100px;
     }
 `
@@ -20,10 +20,9 @@ export const NavWrapper = styled.nav`
     display: flex;
     justify-content: space-between;
     width: 30%;
-    @media (max-width: 800px) {
-        width: 40%;
+    @media (max-width: 1000px){
+        width: 40%
     }
-
 `
 export const StyleLink = styled(Link)`
     text-decoration: none;
@@ -32,7 +31,7 @@ export const StyleLink = styled(Link)`
     &:hover {
         text-decoration: underline ${colors.primary}
     }
-    @media (max-width: 800px) {
+    @media (max-width: 600px) {
         font-size: 14px;
     }
 `
