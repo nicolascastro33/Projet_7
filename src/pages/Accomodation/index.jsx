@@ -4,12 +4,12 @@ import  DropDrown  from '../../components/Dropdown'
 import { useEffect } from 'react'
 import Stars from '../../components/Stars'
 import { useTheme } from '../../utils/hooks'
+import Slider from '../../components/Slider'
 import {
   AccomodationWrapper,
   InformationLogementWrapper,
   FirstPartInformation,
   RatingWrapper,
-  ImageDebutWrapper,
   TitleWrapper,
   MapsLogement,
   AllTagsWrapper,
@@ -39,7 +39,7 @@ function Accomodation() {
   })
   return (
     <AccomodationWrapper>
-        <ImageDebutWrapper src={element.cover} alt={element.title} /> 
+        <Slider element={element}/>
         <InformationLogementWrapper>           
             <FirstPartInformation>
                 <TitleWrapper>{element.title}</TitleWrapper>

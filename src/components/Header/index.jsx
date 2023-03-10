@@ -10,7 +10,9 @@ function Header() {
       </Link>
       <NavWrapper>
         <StyleLink to="/">Accueil</StyleLink>
-        <StyleLink to="/about">À propos</StyleLink>
+        <StyleLink to="/about" data-testid="About">
+          À propos
+        </StyleLink>
       </NavWrapper>
     </HeaderWrapper>
   )

@@ -15,12 +15,6 @@ export const InformationLogementWrapper = styled.div`
     }
 `
 
-export const ImageDebutWrapper = styled.img`
-    margin-top: 30px;
-    width: 100%;
-    border-radius: 20px;
-    max-height: 415px;
-`
 export const FirstPartInformation = styled.div`
 `
 
