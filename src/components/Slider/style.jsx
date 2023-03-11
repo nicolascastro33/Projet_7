@@ -14,6 +14,7 @@ export const AllSliderWrapper = styled.div`
 export const ImageSlider = styled.img`
     border-radius: 20px;
     height: 400px;
+    width: 100%;
     @media(max-width: 1000px){
         height: 350px;
     }

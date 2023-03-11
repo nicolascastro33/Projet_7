@@ -62,11 +62,9 @@ export const TextDropDown = styled.div`
     opacity: 0;
     transition: transform 1000ms, height 1000ms, opacity 1000ms;
     padding-top: 20px;
-    & p{    
-        color: ${colors.primary};
-        font-size: 18px;
-        margin: 10px;
-    }
+    padding-bottom: 10px;
+    overflow: hidden;
+    // overflow-wrap: break-word;
     ${(props) =>
     props.$isOpen &&`
         transform: translateY(0);
@@ -74,4 +72,9 @@ export const TextDropDown = styled.div`
         height: 240px;
         opacity: 1;
     `}
+    & p{    
+        color: ${colors.primary};
+        font-size: 18px;
+        margin: 10px;
+    }
 `

@@ -20,10 +20,19 @@ import {
   AllDropDown,
 } from './style'
 
+function faireRedirection(element){
+    const url = window.location.origin
+    if(element === undefined){
+        window.location.replace(`${url}/error`)
+    }
+}
+
 function Accomodation() {
   const { id } = useParams()
   const {theme} = useTheme()
   const element = Logement.find((element) => element.id === id)
+  faireRedirection(element)
+
   const NumberStarsRating = Number(element.rating)
   const RatingStars = []
   for(let stars = 0; stars < 5; stars++){
@@ -33,7 +42,6 @@ function Accomodation() {
         RatingStars.push(false)
     }
   }  
-
   useEffect(() => {
     document.title = `Kasa - Logement de ${element.host.name}`
   })

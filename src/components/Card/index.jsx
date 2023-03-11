@@ -15,13 +15,13 @@ function Card({ title, id, cover }) {
 }
 
 Card.protoType = {
-  name: PropTypes.string.isRequired,
-  picture: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  cover: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
 }
 Card.defaultProps = {
-  name: '',
-  picture: DefaultPicture,
+  title: '',
+  cover: DefaultPicture,
 }
 
 export default Card

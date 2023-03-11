@@ -1,11 +1,22 @@
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { ImageSlider, AllSliderWrapper } from './style'
 import { Carousel } from 'react-responsive-carousel'
+import DefaultPicture from '../../assets/about-picture.jpg'
 
 function Slider({ element }) {
   const pictures = element.pictures
+  const numberPictures = pictures.length
+  console.log(numberPictures)
+  const pictureAlone = numberPictures === 0 ? {DefaultPicture} : element.pictures 
   return (
     <AllSliderWrapper>
+      {numberPictures === 1 ? (
+        <ImageSlider
+          src={pictureAlone}
+          key={pictureAlone.id}
+          alt="picture"
+        />
+      ) : (
         <Carousel 
             className='slide-container'
             autoPlay 
@@ -25,6 +36,7 @@ function Slider({ element }) {
             />
         ))}
         </Carousel>
+      )}
     </AllSliderWrapper>
   )
 }

@@ -17,7 +17,8 @@ export const ErrorWrapper = styled.h1`
     margin-bottom: 0px;
     @media(max-width: 700px){
         font-size: 96px;
-        margin-top: 100px;
+        margin-top: 150px;
+        margin-bottom: 30px;
     }
 `
  
@@ -26,7 +27,7 @@ export const ErrorMessageWrapper = styled.h2`
     margin: 0 10% 100px 10%;
     @media(max-width: 700px){
         font-size: 18px;
-        margin: auto 10% 50px 10%
+        margin-bottom: 200px;
     }
 `
 
@@ -34,8 +35,11 @@ export const LinkErrorWrapper = styled(Link)`
     color: ${colors.primary};
     font-size: 18px;
     font-weight: normal;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     text-decoration: underline ${colors.primary};
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
     &:hover{
         font-weight: bold;
     }
