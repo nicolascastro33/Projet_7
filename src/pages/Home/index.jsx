@@ -5,7 +5,7 @@ import {
   TextInImageWrapper,
   AllCardsWrapper
 } from './style'
-import { Logement } from '../../logement'
+import { Logement } from '../../data/logement'
 import FirstImage from '../../assets/accueil-picture.jpg'
 import { useEffect } from 'react'
 import Card from '../../components/Card'

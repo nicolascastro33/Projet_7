@@ -3,10 +3,9 @@ import { ImageSlider, AllSliderWrapper } from './style'
 import { Carousel } from 'react-responsive-carousel'
 import DefaultPicture from '../../assets/about-picture.jpg'
 
-function Slider({ element }) {
+function Slideshow({ element }) {
   const pictures = element.pictures
   const numberPictures = pictures.length
-  console.log(numberPictures)
   const pictureAlone = numberPictures === 0 ? {DefaultPicture} : element.pictures 
   return (
     <AllSliderWrapper>
@@ -41,4 +40,4 @@ function Slider({ element }) {
   )
 }
 
-export default Slider
+export default Slideshow

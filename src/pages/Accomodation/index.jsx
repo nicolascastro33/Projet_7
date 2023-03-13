@@ -1,10 +1,10 @@
 import { useParams } from 'react-router-dom'
-import { Logement } from '../../logement'
+import { Logement } from '../../data/logement'
 import  DropDrown  from '../../components/Dropdown'
 import { useEffect } from 'react'
 import Stars from '../../components/Stars'
 import { useTheme } from '../../utils/hooks'
-import Slider from '../../components/Slider'
+import Slideshow from '../../components/Slideshow'
 import {
   AccomodationWrapper,
   InformationLogementWrapper,
@@ -47,7 +47,7 @@ function Accomodation() {
   })
   return (
     <AccomodationWrapper>
-        <Slider element={element}/>
+        <Slideshow element={element}/>
         <InformationLogementWrapper>           
             <FirstPartInformation>
                 <TitleWrapper>{element.title}</TitleWrapper>
@@ -71,7 +71,7 @@ function Accomodation() {
                 <StarsWrapper>
                     {RatingStars?.map((rating, index) => (
                         <Stars
-                            key={`stars-${index}`}
+                            key={`stars-${rating}-${index}`}
                             rating={rating}   
                         />
                     ))}

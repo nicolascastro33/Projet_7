@@ -2,7 +2,7 @@ import { ImageDivWrapper, ImageWrapper, AboutWrapper, AllDropDown } from './styl
 import FirstImage from '../../assets/about-picture.jpg'
 import { useEffect } from 'react'
 import DropDrown from '../../components/Dropdown'
-import { InfoAbout } from '../../InfoAbout'
+import { InfoAbout } from '../../data/InfoAbout'
 
 function About(){
 

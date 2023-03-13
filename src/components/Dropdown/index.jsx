@@ -18,9 +18,9 @@ function DropDrown({ description, name }) {
       <HeaderDropDown theme={theme} onClick={() => setDropDown(!dropDown)}>
         <h2 >{name}</h2>
         {!dropDown ?( 
-          <ArrowDropDown theme={theme} src={Arrow} alt="arrow" />
+          <ArrowDropDown theme={theme} src={Arrow} alt="arrow-closed" />
         ) : (
-          <ArrowDropDown theme={theme} $isOpen src={Arrow} alt="arrow" />
+          <ArrowDropDown theme={theme} $isOpen src={Arrow} alt="arrow-open" />
         )}
         
       </HeaderDropDown>
@@ -28,7 +28,7 @@ function DropDrown({ description, name }) {
         <TextDropDown>
           {isArray ? (
             description?.map((description, index) => 
-                <p>{description}</p>)
+                <p key={index}>{description}</p>)
           ) : (
             <p>{description}</p>
           )}
@@ -36,7 +36,8 @@ function DropDrown({ description, name }) {
       ) : (
         <TextDropDown $isOpen>
           {isArray ? (
-            description?.map((description, index) => <p>{description}</p>)
+            description?.map((description, index) => 
+              <p key={index}>{description}</p>)
           ) : (
             <p>{description}</p>
           )}
