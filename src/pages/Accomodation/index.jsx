@@ -4,6 +4,7 @@ import  DropDrown  from '../../components/Dropdown'
 import { useEffect } from 'react'
 import Stars from '../../components/Stars'
 import { useTheme } from '../../utils/hooks'
+import redirection from '../../utils/function/redirection'
 import Slideshow from '../../components/Slideshow'
 import {
   AccomodationWrapper,
@@ -18,20 +19,16 @@ import {
   OwnerPicture, 
   StarsWrapper,
   AllDropDown,
+  Tag,
 } from './style'
 
-function faireRedirection(element){
-    const url = window.location.origin
-    if(element === undefined){
-        window.location.replace(`${url}/error`)
-    }
-}
+
 
 function Accomodation() {
   const { id } = useParams()
   const {theme} = useTheme()
   const element = Logement.find((element) => element.id === id)
-  faireRedirection(element)
+  redirection(element)
 
   const NumberStarsRating = Number(element.rating)
   const RatingStars = []
@@ -58,7 +55,7 @@ function Accomodation() {
                             theme={theme} 
                             key={`${tag}-${index}`}
                         >
-                            {tag}
+                            <Tag>{tag}</Tag>
                         </TagsWrapper>
                     ))}
                 </AllTagsWrapper>

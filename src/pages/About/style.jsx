@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import colors from "../../utils/style/colors";
 
-export const AboutWrapper = styled.div`
+export const AboutWrapper = styled.main`
     padding: 0 4% 0 4%;
     margin: 40px 0 20px 0;
     width: 92%;  
@@ -34,4 +34,6 @@ export const AllDropDown = styled.div`
     flex-direction: column;
     justify-content: space-between;
     margin-top: 30px ;
-`
+    width: 80%;
+    margin: auto;
+    margin-top: 31px;`

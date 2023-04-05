@@ -16,7 +16,12 @@ a{
 body {
     background-color: ${({isDarkMode}) => (isDarkMode ?  colors.darkMode : colors.backgroundLight)};
     margin: 0;  
+    min-height: 100vh;
 }
+#root{
+    height: 100vh;
+}
+
 `
 
 function GlobalStyle() {

@@ -6,14 +6,11 @@ import { Link } from 'react-router-dom'
 export const CardWrapperLink = styled(Link)`
     background: ${colors.primary};
     width: 25%;
-    height: 240px;    
+    height: 340px;    
     max-width: 340px;
     margin: 15px;    
     border-radius: 10px;
-    text-align: center;
     display: flex;
-    flex-direction: column; 
-    justify-content: center;
     padding: 5px;
     transform: scale(1);
     transition: transform 1000ms; 
@@ -32,12 +29,10 @@ export const CardWrapperLink = styled(Link)`
 `
 
 export const TextCardWrapper = styled.h2`
-color:  ${({theme}) => (theme === 'dark' ? colors.darkMode : colors.secondary)};
+    color:  ${({theme}) => (theme === 'dark' ? colors.darkMode : colors.secondary)};
     font-size: 16px;
-`
+    margin-top: auto;
+    margin-left: 10px;
+    width: 50%;
 
-export const ImageWrapper = styled.img`
-    width: 100%;
-    height: 80%;
-    border-radius: 10px;
 `

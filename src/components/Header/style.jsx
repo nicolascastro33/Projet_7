@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import colors from "../../utils/style/colors";
-import { Link } from "react-router-dom";
 
 export const HeaderWrapper = styled.header`
     display: flex;
@@ -16,22 +15,31 @@ export const LogoWrapper = styled.img`
     }
 `
 
-export const NavWrapper = styled.nav`
+export const NavWrapper = styled.ul`
     display: flex;
     justify-content: space-between;
     width: 30%;
+    list-style-type: none;
     @media (max-width: 1000px){
-        width: 40%
+        width: 40%;
+        flex-wrap: wrap;
     }
 `
-export const StyleLink = styled(Link)`
+export const StyleLink = styled.li`
     text-decoration: none;
     margin: auto;
     color: ${colors.primary};
     &:hover {
-        text-decoration: underline ${colors.primary}
+        font-weight: bold;
     }
     @media (max-width: 600px) {
         font-size: 14px;
+        text-transform: uppercase;
+
+    }
+    ${(props) => 
+        props.$underline && `
+            text-decoration: underline ${colors.primary};
+        `
     }
 `

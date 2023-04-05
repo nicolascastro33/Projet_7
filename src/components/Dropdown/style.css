@@ -1,0 +1,11 @@
+.isAccomodation{
+    min-height: 180px;
+    transition: all 1000ms ease-in-out;
+
+}
+
+@media(max-width: 1000px){
+    .isAccomodation{
+            min-height: initial;
+    }
+}   

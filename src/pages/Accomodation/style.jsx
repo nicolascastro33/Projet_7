@@ -2,12 +2,12 @@ import styled from "styled-components";
 import colors from "../../utils/style/colors";
 
 
-export const AccomodationWrapper = styled.div`
+export const AccomodationWrapper = styled.main`
     padding: 0 4% 0 4%;
     color: ${colors.primary};
 
 `
-export const InformationLogementWrapper = styled.div`
+export const InformationLogementWrapper = styled.section`
     display: flex;
     justify-content: space-between;
     @media(max-width: 1000px){
@@ -32,14 +32,22 @@ export const AllTagsWrapper = styled.div`
 `
 
 export const TagsWrapper = styled.h3`
-    font-size: 14px;
     color: ${({theme}) => (theme === 'dark' ? colors.darkMode : colors.secondary)};
     background: ${colors.primary}; 
     border-radius: 50px;
     text-align: center;
     margin-right: 10px; 
     width: 130px;
-    height: 20px;
+    height: 25px; 
+    display: flex;
+    align-item: center;
+    justify-content: center
+`
+
+export const Tag = styled.h3`
+    font-size: 14px;
+    margin: auto;
+
 `
 
 export const RatingWrapper = styled.div`
@@ -83,21 +91,17 @@ export const OwnerPicture = styled.img`
     height: 60px;
     margin: auto;
     margin-left: 0;
-    @media(max-width: 500px){
-        margin: ;
-    }
 `
 
 export const StarsWrapper = styled.div`
     display: flex;
-    justify-content: center;  
+    justify-content: center; 
     @media(max-width: 500px){
         justify-content: unset;
     }
-
 `
 
-export const AllDropDown = styled.div`
+export const AllDropDown = styled.section`
     color: ${colors.secondary};
     display: grid;
     grid-template-columns: 45% 45%;

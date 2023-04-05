@@ -21,17 +21,22 @@ export const ImageDivWrapper = styled.div`
 `
 export const TextInImageWrapper = styled.h1`
   position: absolute;
-  bottom: 100px;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
   color: ${colors.secondary};
   margin: auto;
+  font-size: 48px;
+  @media(max-width: 750px){
+       font-size: 24px;
+  }
+
 `
 
 export const ImageWrapper = styled.img`
   width: 100%;
-  height: 200%;
-  position: relative;
-  bottom: 100px;
   filter: grayscale(60%);
+  object-fit: cover;
 `
 
 export const AllCardsWrapper = styled.div`
@@ -42,9 +47,6 @@ export const AllCardsWrapper = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     border-radius: 20px;
-    @media(max-width: 750px){
-       
-    }
     ${({theme}) => (theme === 'dark' &&`
       background: ${colors.darkMode};
     `)}

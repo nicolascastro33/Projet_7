@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { Link } from "react-router-dom"
 import colors from "../../utils/style/colors"
 
-export const DivWrapper = styled.div`
+export const DivWrapper = styled.main`
     color: ${colors.primary};
     display: flex;
     flex-direction: column;

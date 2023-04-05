@@ -28,7 +28,6 @@ function Home() {
                   <Card 
                       key={`${logement.title}-${index}`}
                       title={logement.title}
-                      cover={logement.cover}
                       id={logement.id}
                   />
         ))}

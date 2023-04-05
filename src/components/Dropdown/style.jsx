@@ -18,8 +18,10 @@ export const ArrowDropDown = styled.img`
     transition-delay: 200ms;
     transition-property: transform;
     transform: rotate(0deg);
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
     ${({theme}) => (theme ==='dark' && `
-        filter: invert(80%);`
+        filter: invert(25%);`
     )}
     ${(props) =>
         props.$isOpen &&`
@@ -37,9 +39,6 @@ export const HeaderDropDown = styled.button`
     justify-content: space-between;
     margin: 0;
     z-index: 2;
-    ${({theme}) => (theme === 'dark' && `
-    border: 1px solid black;`
-    )}
     & h2{
         font-size: 18px;
         margin-left: 10px;
@@ -54,24 +53,24 @@ export const TextDropDown = styled.div`
     background: ${colors.backgroundLightGrey};
     margin: 0;
     border-radius: 20px;
-    position: relative;
-    bottom: 20px;
-    z-index: 1;
-    height: 0px;
-    transform: translateY(-500px);
-    opacity: 0;
-    transition: transform 1000ms, height 1000ms, opacity 1000ms;
+    position: relative;    
     padding-top: 20px;
     padding-bottom: 10px;
     overflow: hidden;
-    // overflow-wrap: break-word;
+    bottom: 20px;
+    z-index: 1;
+    max-height: 0px;
+    transform: translateY(-300px);
+    opacity: 0;
+    transition: all 500ms ease-in-out;
     ${(props) =>
-    props.$isOpen &&`
-        transform: translateY(0);
-        transition: transform 1000ms, height 1000ms, opacity 400ms;
-        height: 240px;
-        opacity: 1;
-    `}
+        props.$isOpen &&`
+            transform: translateY(0);
+            transition: all 1000ms ease-in-out;
+            max-height: 2000px;
+            opacity: 1;
+        `
+    }
     & p{    
         color: ${colors.primary};
         font-size: 18px;
