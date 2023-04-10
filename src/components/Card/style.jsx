@@ -10,7 +10,6 @@ export const CardWrapperLink = styled(Link)`
     max-width: 340px;
     margin: 15px;    
     border-radius: 10px;
-    display: flex;
     padding: 5px;
     transform: scale(1);
     transition: transform 1000ms; 
@@ -25,7 +24,11 @@ export const CardWrapperLink = styled(Link)`
         width: 100%;
         min-width: none;
     }
-
+`
+export const CardWrapper = styled.article`
+    width: 100%;
+    height: 100%;
+    display: flex;
 `
 
 export const TextCardWrapper = styled.h2`

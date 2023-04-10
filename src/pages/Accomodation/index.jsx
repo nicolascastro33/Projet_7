@@ -9,7 +9,6 @@ import Slideshow from '../../components/Slideshow'
 import {
   AccomodationWrapper,
   InformationLogementWrapper,
-  FirstPartInformation,
   RatingWrapper,
   TitleWrapper,
   MapsLogement,
@@ -46,7 +45,7 @@ function Accomodation() {
     <AccomodationWrapper>
         <Slideshow element={element}/>
         <InformationLogementWrapper>           
-            <FirstPartInformation>
+            <div>
                 <TitleWrapper>{element.title}</TitleWrapper>
                 <MapsLogement>{element.location}</MapsLogement>
                 <AllTagsWrapper>
@@ -59,7 +58,7 @@ function Accomodation() {
                         </TagsWrapper>
                     ))}
                 </AllTagsWrapper>
-            </FirstPartInformation>
+            </div>
             <RatingWrapper>
                 <NameOwnerWrapper>
                     <h3>{element.host.name}</h3>

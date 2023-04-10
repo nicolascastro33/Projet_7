@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 import colors from '../../utils/style/colors'
 
-export const AccueilWrapper = styled.div`
+export const AccueilWrapper = styled.main`
   padding: 0 4% 0 4%;
   margin: 40px 0 20px 0;
   width: 92%;
   display: flex;
   flex-direction: column;
+  min-height: 90%;
 `
 
 export const ImageDivWrapper = styled.div`
@@ -18,6 +19,7 @@ export const ImageDivWrapper = styled.div`
   text-align: center;
   display: flex;
   justify-content: center;
+  margin-bottom: 30px;
 `
 export const TextInImageWrapper = styled.h1`
   position: absolute;
@@ -30,7 +32,6 @@ export const TextInImageWrapper = styled.h1`
   @media(max-width: 750px){
        font-size: 24px;
   }
-
 `
 
 export const ImageWrapper = styled.img`
@@ -40,9 +41,8 @@ export const ImageWrapper = styled.img`
 `
 
 export const AllCardsWrapper = styled.div`
-    margin-top: 30px;
+    margin: auto;
     background: ${colors.backgroundLightGrey}; 
-    // padding: 2%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

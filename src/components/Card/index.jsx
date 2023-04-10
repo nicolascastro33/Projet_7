@@ -1,4 +1,4 @@
-import { CardWrapperLink, TextCardWrapper } from './style'
+import { CardWrapper, CardWrapperLink, TextCardWrapper } from './style'
 import PropTypes from 'prop-types'
 import DefaultPicture from '../../assets/accueil-picture.jpg'
 import { useTheme } from '../../utils/hooks'
@@ -8,7 +8,9 @@ function Card({ title, id }) {
   const linkId = `/logements/${id}`
   return (
       <CardWrapperLink to={linkId}>
-        <TextCardWrapper theme={theme}>{title}</TextCardWrapper>
+        <CardWrapper>
+                  <TextCardWrapper theme={theme}>{title}</TextCardWrapper>
+        </CardWrapper>
       </CardWrapperLink>
   )
 }

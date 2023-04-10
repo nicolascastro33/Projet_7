@@ -5,6 +5,7 @@ import colors from "../../utils/style/colors";
 export const AccomodationWrapper = styled.main`
     padding: 0 4% 0 4%;
     color: ${colors.primary};
+    min-height: 90%;
 
 `
 export const InformationLogementWrapper = styled.section`
@@ -13,9 +14,6 @@ export const InformationLogementWrapper = styled.section`
     @media(max-width: 1000px){
         flex-direction: column;
     }
-`
-
-export const FirstPartInformation = styled.div`
 `
 
 export const TitleWrapper = styled.h1`

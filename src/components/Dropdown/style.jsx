@@ -15,8 +15,7 @@ export const ArrowDropDown = styled.img`
     height: 30px;
     margin: auto;
     margin-right: 10px;
-    transition-delay: 200ms;
-    transition-property: transform;
+    transition: all 500ms ease-in-out;
     transform: rotate(0deg);
     filter: invert(100%);
     -webkit-filter: invert(100%);
@@ -26,8 +25,7 @@ export const ArrowDropDown = styled.img`
     ${(props) =>
         props.$isOpen &&`
             transform: rotate(180deg);
-            transition-delay: 200ms;
-            transition-property: transform;
+            transition: all 500ms ease-in-out;
             `
     }
 `
@@ -53,11 +51,11 @@ export const TextDropDown = styled.div`
     background: ${colors.backgroundLightGrey};
     margin: 0;
     border-radius: 20px;
-    position: relative;    
+    position: relative;  
+    bottom: 20px;  
     padding-top: 20px;
     padding-bottom: 10px;
     overflow: hidden;
-    bottom: 20px;
     z-index: 1;
     max-height: 0px;
     transform: translateY(-300px);
@@ -66,11 +64,12 @@ export const TextDropDown = styled.div`
     ${(props) =>
         props.$isOpen &&`
             transform: translateY(0);
-            transition: all 1000ms ease-in-out;
+            transition: all 500ms ease-in-out;
             max-height: 2000px;
             opacity: 1;
         `
     }
+    
     & p{    
         color: ${colors.primary};
         font-size: 18px;

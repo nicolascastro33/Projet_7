@@ -7,6 +7,7 @@ export const AboutWrapper = styled.main`
     width: 92%;  
     display: flex;
     flex-direction: column;
+    min-height: 90%;
 `
 
 export const ImageDivWrapper = styled.div`
