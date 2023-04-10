@@ -31,6 +31,12 @@ export const ArrowRight = styled.img`
     z-index: 2;
     filter: invert(100%);
     -webkit-filter: invert(100%);
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+    &:hover{
+        transform: scale(1.2) rotate(-90deg);
+        transition: all 500ms ease-in-out;
+    }
 `
 
 export const ArrowLeft = styled.img`
@@ -42,6 +48,12 @@ export const ArrowLeft = styled.img`
     z-index: 2;
     filter: invert(100%);
     -webkit-filter: invert(100%);
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+    &:hover{
+        transform: scale(1.2) rotate(90deg);
+        transition: all 500ms ease-in-out;
+    }
 `
 
 export const ArrowsWrapper = styled.div`
