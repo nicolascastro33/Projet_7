@@ -15,7 +15,7 @@ export const ArrowDropDown = styled.img`
     height: 30px;
     margin: auto;
     margin-right: 10px;
-    transition: all 500ms ease-in-out;
+    transition: transform 500ms ease-in-out;
     transform: rotate(0deg);
     filter: invert(100%);
     -webkit-filter: invert(100%);
@@ -25,7 +25,7 @@ export const ArrowDropDown = styled.img`
     ${(props) =>
         props.$isOpen &&`
             transform: rotate(180deg);
-            transition: all 500ms ease-in-out;
+            transition: transform 500ms ease-in-out;
             `
     }
 `
