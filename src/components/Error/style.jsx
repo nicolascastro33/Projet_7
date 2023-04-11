@@ -8,6 +8,9 @@ export const DivWrapper = styled.main`
     flex-direction: column;
     justify-content: center;
     text-align: center; 
+    max-width: 1440px;
+    min-height: 100%;
+    margin: auto;
 `
 
 export const ErrorWrapper = styled.h1`

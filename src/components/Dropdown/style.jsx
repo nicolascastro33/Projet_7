@@ -2,7 +2,7 @@ import styled from "styled-components";
 import colors from "../../utils/style/colors";
 
 
-export const OneDropDrown = styled.div`
+export const OneDropDrown = styled.article`
     display: flex; 
     flex-direction: column;
     overflow: hidden; 

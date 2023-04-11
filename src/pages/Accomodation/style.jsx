@@ -6,6 +6,8 @@ export const AccomodationWrapper = styled.main`
     padding: 0 4% 0 4%;
     color: ${colors.primary};
     min-height: 90%;
+    max-width: 1440px;
+    margin: auto;
 
 `
 export const InformationLogementWrapper = styled.section`
@@ -27,22 +29,24 @@ export const MapsLogement = styled.h2`
 
 export const AllTagsWrapper = styled.div`
     display: flex;
+    flex-wrap: wrap;
 `
 
-export const TagsWrapper = styled.h3`
+export const TagsWrapper = styled.div`
     color: ${({theme}) => (theme === 'dark' ? colors.darkMode : colors.secondary)};
     background: ${colors.primary}; 
     border-radius: 50px;
     text-align: center;
     margin-right: 10px; 
-    width: 130px;
+    margin-bottom: 10px;
+    min-width: 130px;
     height: 25px; 
     display: flex;
     align-item: center;
     justify-content: center
 `
 
-export const Tag = styled.h3`
+export const Tag = styled.h4`
     font-size: 14px;
     margin: auto;
 
@@ -66,7 +70,15 @@ export const RatingWrapper = styled.div`
 `
 export const NameOwnerWrapper = styled.div`
     display: flex;
-    margin: 20px 0 5px 10px;
+    margin: 30px 0 5px 10px;
+    @media(max-width: 1000px){
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    @media(max-width: 500px){
+        display: flex;
+        margin-top: 10px;
+    }
     & h3{
         font-size: 18px;
         font-weight: normal;
@@ -76,10 +88,7 @@ export const NameOwnerWrapper = styled.div`
             margin-left: unset;
         }
     }
-    @media(max-width: 500px){
-        display: flex;
-        margin-top: 10px;
-    }
+    
 
 `
 

@@ -3,11 +3,12 @@ import colors from "../../utils/style/colors";
 
 export const AboutWrapper = styled.main`
     padding: 0 4% 0 4%;
-    margin: 40px 0 20px 0;
     width: 92%;  
     display: flex;
     flex-direction: column;
     min-height: 90%;
+    max-width: 1440px;
+    margin: auto;
 `
 
 export const ImageDivWrapper = styled.div`
@@ -22,13 +23,15 @@ export const ImageDivWrapper = styled.div`
 `
 
 export const ImageWrapper = styled.img` 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    object-fit: cover;
     width: 100%;
-    height: 200%;
-    position: relative;
-    bottom: 100px;
 `
 
-export const AllDropDown = styled.div`
+export const AllDropDown = styled.section`
     color: ${colors.secondary};
     display: flex;
     align-item: center; 

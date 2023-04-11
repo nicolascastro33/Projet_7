@@ -29,6 +29,7 @@ function Home() {
                       key={`${logement.title}-${index}`}
                       title={logement.title}
                       id={logement.id}
+                      cover={logement.cover}
                   />
         ))}
       </AllCardsWrapper>

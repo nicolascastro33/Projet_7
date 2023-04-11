@@ -5,6 +5,14 @@ export const HeaderWrapper = styled.header`
     display: flex;
     justify-content: space-between;
     padding: 2% 4% 0 4%;
+    max-width: 1440px;
+    margin: auto;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    @media (max-width: 600px){
+        margin-bottom: 16px;
+        margin-top: 0px;
+    }
 `
 
 export const LogoWrapper = styled.img`
@@ -18,10 +26,10 @@ export const LogoWrapper = styled.img`
 export const NavWrapper = styled.ul`
     display: flex;
     justify-content: space-between;
-    width: 30%;
+    gap: 30px;
     list-style-type: none;
     @media (max-width: 1000px){
-        width: 40%;
+        gap: 20px;
         flex-wrap: wrap;
     }
 `
