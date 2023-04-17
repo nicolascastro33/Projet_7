@@ -27,10 +27,10 @@ export const CardWrapper = styled.article`
 `
 
 export const TextCardWrapper = styled.h2`
-    color:  ${({theme}) => (theme === 'dark' ? colors.darkMode : colors.secondary)};
     font-size: 16px;
     margin-top: auto;
     margin-left: 10px;
+    color: ${colors.secondary};
     width: 50%;
     z-index: 1;
 `
