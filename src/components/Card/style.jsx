@@ -24,6 +24,7 @@ export const CardWrapper = styled.article`
     display: flex;
     position: relative;
     overflow: hidden;
+    border-radius: 10px;
 `
 
 export const TextCardWrapper = styled.h2`
@@ -42,5 +43,4 @@ export const ImageCardWrapper = styled.img`
     transform: translate(-50%,-50%);
     object-fit: cover;
     min-width: 100%;
-
 `
